@@ -165,8 +165,8 @@ section {
 
 .section-container {
   display: flex;
-  overflow: hidden;
-  position: relative;
+  
+ 
 }
 
 /* PROFILE SECTION */
@@ -180,11 +180,27 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 600px;
-  width: 600px;
+  height: 400px;
+  width: 400px;
   margin: auto 0;
   
+  
 }
+.section__pic-container2 {
+
+  position: relative;
+  width: 70%; /* Adjust size as needed */
+  height: 60%; /* Adjust size as needed */
+  margin:100px auto 50px auto;
+  overflow: hidden; /* Ensures that any overflow is hidden */
+  object-fit: contain;
+  
+
+
+  
+}
+
+
 
 .section__text {
   align-self: center;
@@ -286,6 +302,9 @@ section {
 .about-details-container {
   justify-content: center;
   flex-direction: column;
+  
+
+  
 }
 
 .about-containers,
@@ -295,13 +314,16 @@ section {
 
 .about-pic {
   border-radius: 0.5rem;
-  flex-shrink: 0;
-    display: block;
+  position: relative; /* Stack images in normal document flow */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Initially hide all images */
     
-    flex-shrink: 0;
-    display: block;
+  }
 
-
+.about-pic.visible{
+  display: block; /* Show the image with the "visible" class */
 }
 
 .arrow {
@@ -330,11 +352,7 @@ section {
     overflow: hidden;
 }
 
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
+
 
 /* EXPERIENCE SECTION */
 
@@ -480,6 +498,3 @@ footer p {
   font-weight: bold;
   animation: scaleUpDown 3.5s infinite; /* 3.5s duration, infinite loop */
 }
-
-
-
