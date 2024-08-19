@@ -2,6 +2,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+
+@font-face {
+  font-family: 'OCR A';
+  src: url('fonts/OCRA.ttf') format('truetype'); /* Adjust the URL and format as needed */}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +14,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: black;
-  color: white; /* Default text color set to white */
+  background-color: black; /* Set background to black */
+  color: white; /* Set default text color to white */
 }
 
 html {
@@ -18,7 +23,7 @@ html {
 }
 
 p {
-  color: white; /* Text color set to white */
+  color: white; /* Ensure paragraph text is white */
 }
 
 /* TRANSITION */
@@ -48,27 +53,24 @@ nav {
 }
 
 a {
-  color: white; /* Text color set to white */
+  color: white; /* Set link color to white */
   text-decoration: none;
   text-decoration-color: white;
-  
 }
 
 a:hover {
-  color: grey; /* Adjust this color if needed */
+  color: grey;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181); /* Adjust this color if needed */
+  text-decoration-color: rgb(181, 181, 181);
 }
 
 .logo {
   font-size: 2rem;
-  color: white; /* Text color set to white */
 }
 
 .logo:hover {
   cursor: default;
-
 }
 
 /* HAMBURGER MENU */
@@ -94,7 +96,7 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: white; /* Background color set to white */
+  background-color: white; /* Set hamburger icon color to white */
   transition: all 0.3 ease-in-out;
 }
 
@@ -102,7 +104,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: black; /* Background color set to black */
+  background-color: black; /* Set menu background to black */
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -114,15 +116,10 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: white; /* Text color set to white */
+  color: white; /* Set menu link color to white */
   text-decoration: none;
   transition: all 0.3 ease-in-out;
- 
 }
-
-
-
-
 
 .menu-links li {
   list-style: none;
@@ -164,12 +161,12 @@ section {
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
-  background-color: black; /* Background color set to black */
-  color: white; /* Text color set to white */
 }
 
-.blackout {
-  background-color: black; /* Background color set to black */
+.section-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
 }
 
 /* PROFILE SECTION */
@@ -183,8 +180,8 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 600px;
+  width: 600px;
   margin: auto 0;
   
 }
@@ -192,7 +189,6 @@ section {
 .section__text {
   align-self: center;
   text-align: center;
-  color: white; /* Text color set to white */
 }
 
 .section__text p {
@@ -206,7 +202,8 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
-  color: white; /* Text color set to white */
+  font-family: 'OCR A', 'Courier New', Courier, monospace;
+  
 }
 
 #socials-container {
@@ -216,9 +213,6 @@ section {
   gap: 1rem;
 }
 
-.section__text > h1{
-  margin-bottom: 30px;
-}
 /* ICONS */
 
 .icon {
@@ -232,6 +226,8 @@ section {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: 15px;
+  
 }
 
 .btn {
@@ -239,13 +235,13 @@ section {
   transition: all 300ms ease;
   padding: 1rem;
   width: 8rem;
-
-  color: white; /* Text color set to white */
+  border-radius: 0.5rem;
 }
 
 
 .btn-color-2 {
-  border: rgb(255, 255, 255) .15rem solid;
+  border: rgb(253, 253, 253) 0.1rem solid;
+  color: white;
 }
 
 .btn-color-1:hover,
@@ -255,9 +251,8 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  
-  transform: scale(1.5);
-  color: white; /* Text color set to white */
+  background: rgb(53, 53, 53);
+  color: white; /* Set button text color to white */
 }
 
 .btn-color-1:hover {
@@ -280,16 +275,12 @@ section {
 
 #about {
   position: relative;
-  padding: 2rem 10rem;
 }
 
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 1.5rem;
-  display: flex;
-  
-
+  margin-top: 2rem;
 }
 
 .about-details-container {
@@ -303,40 +294,46 @@ section {
 }
 
 .about-pic {
-  border-radius: 1rem;
-  margin-bottom: 20px;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+    display: block;
+    
+    flex-shrink: 0;
+    display: block;
+
+
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
 }
 
 .details-container {
-  padding: 3rem;
+  padding: 1.5rem;
   flex: 1;
-  background: black; /* Background color set to black */
-  color: white; /* Text color set to white */
-  border-radius: 1rem;
+  background: black; /* Set details container background to black */
+  border-radius: 0.8rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
- 
+  color: white; /* Set text color to white */
 }
 
 .section-container {
   gap: 4rem;
   height: 80%;
+  position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
 }
 
 .section__pic-container {
   height: 400px;
   width: 400px;
-  gap: 20px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: -10%;
-  padding: auto;
-
-}
-
-#about > h1{
-  margin-bottom: 25px;
+  margin: auto 0;
 }
 
 /* EXPERIENCE SECTION */
@@ -346,7 +343,7 @@ section {
 }
 
 .experience-sub-title {
-  color: white; /* Text color set to white */
+  color: white; /* Set subtitle color to white */
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -363,16 +360,15 @@ section {
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 4rem;
+  gap: 2.5rem;
   justify-content: space-around;
-  margin-right: 5%;
 }
 
 article {
   display: flex;
-  width: 4rem;
+  width: 10rem;
   justify-content: space-around;
-  gap: 0.1rem;
+  gap: 0.5rem;
 }
 
 article .icon {
@@ -386,23 +382,23 @@ article .icon {
 }
 
 .color-container {
-  border-color: white;
-  background: black;
+  border-color: rgb(163, 163, 163);
+  background: rgb(30, 30, 30); /* Set background color for project sections */
 }
 
 .project-img {
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   width: 90%;
   height: 90%;
 }
 
 .project-title {
   margin: 1rem;
-  color: white; /* Text color set to white */
+  color: white; /* Set project title color to white */
 }
 
 .project-btn {
-  color: white; /* Text color set to white */
+  color: white; /* Set button text color to white */
   border-color: rgb(163, 163, 163);
 }
 
@@ -418,13 +414,12 @@ article .icon {
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: black; /* Background color set to black */
+  background: black; /* Set contact container background to black */
   margin: 2rem auto;
   padding: 0.5rem;
-  color: white; /* Text color set to white */
 }
 
 .contact-info-container {
@@ -437,7 +432,7 @@ article .icon {
 
 .contact-info-container p {
   font-size: larger;
-  color: white; /* Text color set to white */
+  color: white; /* Ensure contact info text is white */
 }
 
 .contact-icon {
@@ -453,21 +448,15 @@ article .icon {
 footer {
   height: 26vh;
   margin: 0 1rem;
-  background-color: black; /* Background color set to black */
-  color: white; /* Text color set to white */
+  background-color: black; /* Set footer background to black */
 }
 
 footer p {
   text-align: center;
+  color: white; /* Ensure footer text is white */
 }
 
-
-
-/*text-animation */
-
-
-
-
+/* TEXT ANIMATION */
 
 @keyframes slideIn {
   from { transform: translateX(-100%); }
@@ -480,9 +469,6 @@ footer p {
   animation: slideIn 2s ease-out; /* 2s duration, ease-out timing function */
 }
 
-
-
-
 @keyframes scaleUpDown {
   0% { transform: scale(1); }
   50% { transform: scale(1.3); }
@@ -492,9 +478,8 @@ footer p {
 .scale-text {
   font-size: 3rem;
   font-weight: bold;
-  animation: scaleUpDown 3.5s infinite; /* 2s duration, infinite loop */
+  animation: scaleUpDown 3.5s infinite; /* 3.5s duration, infinite loop */
 }
-
 
 
 
